@@ -10,16 +10,16 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --color-primary: #1a3c34;
-      --color-accent: #c8a45c;
-      --color-accent-light: #dfc07a;
-      --color-bg: #faf9f6;
-      --color-dark: #111;
+      --color-primary: #2B5FE0;
+      --color-accent: #b0b8c4;
+      --color-accent-light: #d0d5dc;
+      --color-bg: #f5f7fa;
+      --color-dark: #1a1a2e;
       --color-gray: #6b7280;
       --color-light-gray: #e5e7eb;
       --color-white: #fff;
       --font-body: 'Inter', sans-serif;
-      --font-heading: 'Playfair Display', serif;
+      --font-heading: 'Inter', sans-serif;
       --radius: 12px;
       --shadow: 0 4px 24px rgba(0,0,0,0.08);
       --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
@@ -42,7 +42,7 @@
       display: flex; align-items: center; justify-content: space-between; height: 72px;
     }
     .logo { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--color-primary); text-decoration: none; }
-    .logo span { color: var(--color-accent); }
+    .logo span { color: #b0b8c4; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--color-gray); font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
     .nav-links a:hover { color: var(--color-primary); }
@@ -51,46 +51,46 @@
       border-radius: 50px; text-decoration: none; font-size: 0.85rem; font-weight: 600;
       transition: var(--transition);
     }
-    .nav-cta:hover { background: var(--color-accent); color: var(--color-dark); }
+    .nav-cta:hover { background: #3d6fe8; color: var(--color-white); }
     .menu-toggle { display: none; background: none; border: none; cursor: pointer; }
     .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-dark); margin: 5px 0; transition: var(--transition); }
 
     /* === HERO === */
     .hero {
       min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(160deg, var(--color-primary) 0%, #0f2620 50%, #1a3c34 100%);
+      background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
       position: relative; overflow: hidden; padding: 100px 24px;
     }
     .hero::before {
       content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(200,164,92,0.15) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 30% 50%, rgba(43,95,224,0.15) 0%, transparent 60%);
     }
     .hero-content { max-width: 800px; text-align: center; position: relative; z-index: 2; }
     .hero-badge {
-      display: inline-block; padding: 8px 20px; border: 1px solid rgba(200,164,92,0.4);
-      border-radius: 50px; color: var(--color-accent); font-size: 0.8rem; font-weight: 500;
+      display: inline-block; padding: 8px 20px; border: 1px solid rgba(43,95,224,0.4);
+      border-radius: 50px; color: var(--color-primary); font-size: 0.8rem; font-weight: 500;
       letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px;
     }
     .hero h1 {
       font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.2rem);
       color: var(--color-white); line-height: 1.15; margin-bottom: 24px;
     }
-    .hero h1 em { font-style: normal; color: var(--color-accent); }
+    .hero h1 em { font-style: normal; color: var(--color-primary); }
     .hero p { color: rgba(255,255,255,0.7); font-size: 1.15rem; max-width: 560px; margin: 0 auto 40px; }
     .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn {
       padding: 14px 32px; border-radius: 50px; font-size: 0.95rem; font-weight: 600;
       text-decoration: none; transition: var(--transition); cursor: pointer; border: none;
     }
-    .btn-primary { background: var(--color-accent); color: var(--color-dark); }
-    .btn-primary:hover { background: var(--color-accent-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,164,92,0.3); }
+    .btn-primary { background: var(--color-primary); color: var(--color-white); }
+    .btn-primary:hover { background: #3d6fe8; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(43,95,224,0.3); }
     .btn-outline { background: transparent; color: var(--color-white); border: 1.5px solid rgba(255,255,255,0.3); }
-    .btn-outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .btn-outline:hover { border-color: var(--color-primary); color: var(--color-primary); }
     .hero-stats {
       display: flex; gap: 48px; justify-content: center; margin-top: 64px;
       padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
     }
-    .stat-number { font-family: var(--font-heading); font-size: 2rem; color: var(--color-accent); display: block; }
+    .stat-number { font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary); display: block; font-weight: 800; }
     .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
 
     /* === SECTIONS === */
@@ -98,7 +98,7 @@
     .container { max-width: 1200px; margin: 0 auto; }
     .section-header { text-align: center; max-width: 600px; margin: 0 auto 64px; }
     .section-tag {
-      color: var(--color-accent); font-size: 0.8rem; font-weight: 600;
+      color: var(--color-primary); font-size: 0.8rem; font-weight: 600;
       letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
     }
     .section-header h2 { font-family: var(--font-heading); font-size: 2.4rem; margin-bottom: 16px; color: var(--color-primary); }
@@ -113,12 +113,13 @@
       transition: var(--transition); color: var(--color-gray);
     }
     .filter-tab.active, .filter-tab:hover { background: var(--color-primary); color: var(--color-white); border-color: var(--color-primary); }
+    .property-badge { background: var(--color-primary); color: var(--color-white); }
     .properties-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
     .property-card {
       background: var(--color-bg); border-radius: var(--radius); overflow: hidden;
       transition: var(--transition); border: 1px solid transparent;
     }
-    .property-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--color-accent); }
+    .property-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
     .property-img {
       height: 240px; background: linear-gradient(135deg, var(--color-primary), #2d5a4e);
       display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
@@ -135,7 +136,7 @@
       color: var(--color-dark); padding: 4px 14px; border-radius: 50px;
       font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
     }
-    .property-badge.terreno { background: #34d399; }
+    .property-badge.terreno { background: #10b981; }
     .property-info { padding: 24px; }
     .property-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
     .property-location { color: var(--color-gray); font-size: 0.85rem; margin-bottom: 16px; display: flex; align-items: center; gap: 6px; }
@@ -149,7 +150,7 @@
     .property-price { font-family: var(--font-heading); font-size: 1.3rem; color: var(--color-primary); font-weight: 700; }
     .property-price small { font-family: var(--font-body); font-size: 0.7rem; color: var(--color-gray); font-weight: 400; }
     .property-link {
-      color: var(--color-accent); font-weight: 600; font-size: 0.85rem;
+      color: var(--color-primary); font-weight: 600; font-size: 0.85rem;
       text-decoration: none; transition: var(--transition);
     }
     .property-link:hover { color: var(--color-primary); }
@@ -160,13 +161,13 @@
       background: var(--color-white); padding: 36px; border-radius: var(--radius);
       border: 1px solid var(--color-light-gray); transition: var(--transition);
     }
-    .service-card:hover { border-color: var(--color-accent); box-shadow: var(--shadow); }
+    .service-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow); }
     .service-icon { font-size: 2rem; margin-bottom: 20px; }
     .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
     .service-card p { color: var(--color-gray); font-size: 0.9rem; }
 
     /* === ZONAS === */
-    #zonas { background: var(--color-primary); color: var(--color-white); }
+    #zonas { background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: var(--color-white); }
     #zonas .section-header h2 { color: var(--color-white); }
     #zonas .section-header p { color: rgba(255,255,255,0.6); }
     .zones-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
@@ -174,14 +175,14 @@
       background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius); padding: 32px; transition: var(--transition);
     }
-    .zone-card:hover { background: rgba(255,255,255,0.1); border-color: var(--color-accent); transform: translateY(-4px); }
+    .zone-card:hover { background: rgba(255,255,255,0.1); border-color: var(--color-primary); transform: translateY(-4px); }
     .zone-card h3 { font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 10px; }
     .zone-card p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 16px; }
     .zone-tag {
       display: inline-block; padding: 4px 12px; border-radius: 50px;
       font-size: 0.75rem; font-weight: 600;
     }
-    .zone-tag.hot { background: rgba(200,164,92,0.2); color: var(--color-accent); }
+    .zone-tag.hot { background: rgba(43,95,224,0.2); color: #7ba3f7; }
 
     /* === PROCESO === */
     .process-steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 32px; counter-reset: step; }
@@ -190,7 +191,7 @@
       counter-increment: step; content: counter(step);
       display: flex; align-items: center; justify-content: center;
       width: 56px; height: 56px; border-radius: 50%;
-      background: var(--color-primary); color: var(--color-accent);
+      background: var(--color-primary); color: var(--color-white);
       font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700;
       margin: 0 auto 20px;
     }
@@ -220,7 +221,7 @@
       transition: var(--transition); background: var(--color-white);
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(200,164,92,0.15);
+      outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(43,95,224,0.15);
     }
     .form-group textarea { resize: vertical; min-height: 100px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -229,7 +230,7 @@
       border: none; border-radius: 50px; font-size: 0.95rem; font-weight: 600;
       cursor: pointer; transition: var(--transition);
     }
-    .btn-submit:hover { background: var(--color-accent); color: var(--color-dark); }
+    .btn-submit:hover { background: #3d6fe8; color: var(--color-white); }
 
     /* === FOOTER === */
     footer {
@@ -243,11 +244,11 @@
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 10px; }
     .footer-col a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
-    .footer-col a:hover { color: var(--color-accent); }
+    .footer-col a:hover { color: var(--color-primary); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 0.8rem; }
     .social-links { display: flex; gap: 16px; }
     .social-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.2rem; transition: var(--transition); }
-    .social-links a:hover { color: var(--color-accent); }
+    .social-links a:hover { color: var(--color-primary); }
 
     /* === WhatsApp float === */
     .whatsapp-float {
@@ -284,7 +285,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#" class="logo">Smart<span>lands</span></a>
+    <a href="#" class="logo">Smart<span>Lands</span></a>
     <ul class="nav-links">
       <li><a href="#propiedades">Propiedades</a></li>
       <li><a href="#servicios">Servicios</a></li>
@@ -559,7 +560,7 @@
 <section id="zonas">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag" style="color: var(--color-accent);">Ubicaciones</div>
+      <div class="section-tag" style="color: #7ba3f7;">Ubicaciones</div>
       <h2>Zonas de Alta Plusvalia</h2>
       <p>Las areas con mayor crecimiento y potencial de inversion en la region.</p>
     </div>
@@ -706,7 +707,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#" class="logo">Smart<span>lands</span></a>
+        <a href="#" class="logo">Smart<span>Lands</span></a>
         <p>Tu aliado en bienes raices en Baja California. Asesoria experta para inversiones inteligentes en Ensenada y Valle de Guadalupe.</p>
       </div>
       <div class="footer-col">
